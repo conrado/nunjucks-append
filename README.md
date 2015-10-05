@@ -1,4 +1,4 @@
-# Nunjucks Append
+# Nunjucks Sekizai
 
 Allows one to define a tag that subviews can append content to. Handy for
 letting subviews add resources to the head or footer, for example.
@@ -14,9 +14,9 @@ The layout - `/views/layouts/default.html`:
         <title>The Title</title>
         <link rel="stylesheet" href="/stylesheets/style.css" />
 
-        {% output "javascript" %}
+        {% render_block "javascript" %}
         <script src="/jquery.js"></script>
-        {% endoutput %}
+        {% endrender_block %}
     </head>
     <body>
         {% block content %}{% endblock %}
@@ -29,10 +29,10 @@ The view - `/views/index.html`:
 ```HTML
 {% extends "/layouts/default.html" %}
 
-{% append "javascript" %}
+{% addtoblock "javascript" %}
 <!-- Will be output beneath jquery.js -->
 <script src="/index-script.js"></script>
-{% endappend %}
+{% endaddtoblock %}
 
 {% block content %}
 <div>
@@ -59,4 +59,13 @@ The output:
     </div>
 </body>
 </html>
+```
+
+To add to the tags to the nunjucks use `install`:
+
+```javscript
+var nunjucks = require('nunjucks');
+var nunjucks_sekizai =  require('nunjucks-sekizai');
+var env = nunjucks.configure();
+nunjucks_sekizai(env);
 ```

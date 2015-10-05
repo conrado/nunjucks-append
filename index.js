@@ -1,5 +1,5 @@
-var append = require('./lib/nunjucks-tags/append'),
-  output = require('./lib/nunjucks-tags/output');
+var addtoblock   = require('./lib/nunjucks-tags/addtoblock');
+var render_block = require('./lib/nunjucks-tags/render_block');
 
 module.exports = {
 
@@ -8,8 +8,8 @@ module.exports = {
    *
    * @param {Object} nunjucksEnvironment The nunjucks environment to extend.
    */
-  initialise: function(nunjucksEnvironment) {
-    nunjucksEnvironment.addExtension('append', append);
-    nunjucksEnvironment.addExtension('output', output);
+  install: function(nunjucksEnvironment) {
+    nunjucksEnvironment.addExtension('addtoblock', addtoblock);
+    nunjucksEnvironment.addExtension('render_block', render_block);
   }
 }

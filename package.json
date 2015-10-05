@@ -1,21 +1,27 @@
 {
-  "name": "nunjucks-append",
-  "version": "0.0.4",
-  "author": "Michael Robinson <mike@pagesofinterest.net>",
+  "name": "nunjucks-sekizai",
+  "version": "0.0.5",
+  "author": "Conrado Buhrer <conrado@buhrer.net>",
   "description": "A nunjucks extension that allows one to create a tag and append content to it in subviews",
   "contributors": [
     {
-    "name": "Michael Robinson",
-    "email": "mike@pagesofinterest.net"
-  }
+      "name": "Conrado Buhrer",
+      "email": "conrado@buhrer.net"
+    },
+    {
+      "name": "Michael Robinson",
+      "email": "mike@pagesofinterest.net"
+    }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/faceleg/nunjucks-append.git"
+    "url": "https://github.com/conrado/nunjucks-sekizai.git"
   },
   "keywords": [
     "nunjucks",
-    "append"
+    "sekizai",
+    "append",
+    "block"
   ],
   "license": "MIT",
   "dependencies": {
