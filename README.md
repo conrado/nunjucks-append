@@ -67,5 +67,5 @@ To add to the tags to the nunjucks use `install`:
 var nunjucks = require('nunjucks');
 var nunjucks_sekizai =  require('nunjucks-sekizai');
 var env = nunjucks.configure();
-nunjucks_sekizai(env);
+nunjucks_sekizai.install(env);
 ```
